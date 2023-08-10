@@ -5,7 +5,8 @@ const redis = require('../redis')
 const UsercitiesModel = require('../model/usercities.model')
 const cityrouter = express.Router()
 
-cityrouter.get("/",auth, async (req, res) => {
+cityrouter.get("/", async (req, res) => {
+    console.log(".........try...........")
     const city = req.query.city || req.preferredcity
     const cachedata = await redis.get(city+req.userID)
     console.log(cachedata,"saif khan")

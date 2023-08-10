@@ -3,6 +3,7 @@ import Signup from "./SignUp";
 import Login from "./Login";
 import Nav from "./Nav";
 import HomePage from "./Home"
+import WeatherSearchCard from "./SeacrhCard"
 
 
 const Main = () => {
@@ -14,6 +15,7 @@ const Main = () => {
                 {/* <Route path="/" element={< HomePage/>} /> */}
                 <Route path="/Register" element={<Signup />} />
                 <Route path="/Login" element={<Login />} />
+                <Route path="/weather" element={<WeatherSearchCard />} />
             </Routes>
         </Router>
     );
