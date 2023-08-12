@@ -16,6 +16,7 @@ console.log("hi")
     fetch(`http://localhost:4039/city?city=${city}`)
       .then(response => {
         if (!response.ok) {
+          console.log(response)
           throw new Error('Network response was not ok');
         }
         return response.json();
@@ -32,14 +33,17 @@ console.log("hi")
   return (
     <div className="App">
       <h1>Weather App</h1>
-      <div>
-        <input
+      <div className='searchCont'>
+      <div >
+        <input className='inputTag'
           type="text"
           placeholder="Enter city name"
           value={city}
           onChange={(e) => setCity(e.target.value)}
         />
         <button onClick={handleCityChange}>Search</button>
+      </div>
+      
       </div>
       {weatherData && <WeatherCard data={weatherData} />}
     </div>

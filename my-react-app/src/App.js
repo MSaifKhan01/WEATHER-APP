@@ -2,18 +2,23 @@
 import './App.css';
 import HomePage from './Components/Home';
 
-import Main from './Components/Main';
+
 import Nav from './Components/Nav';
+import Path from './Components/path';
 
 
 function App() {
   return (
     <div className="App">
-    
 
-      < Main />
+
+ 
+
+    {/* <Nav/> */}
+
+    < Path />
       
-      < HomePage />
+      {/* < HomePage /> */}
       
     </div>
   );

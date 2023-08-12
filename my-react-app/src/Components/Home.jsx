@@ -21,11 +21,13 @@ const HomePage = () => {
 
   return (
     <div className="home-page">
+      
       <img
         src={arr[currentImageIndex]}
         alt="Slideshow"
         className="slideshow"
       />
+
     </div>
   );
 };

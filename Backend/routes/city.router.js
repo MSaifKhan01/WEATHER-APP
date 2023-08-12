@@ -28,7 +28,7 @@ cityrouter.get("/", async (req, res) => {
 
 })
 
-cityrouter.get("/usercity",auth,async (req,res)=>{
+cityrouter.get("/usercity",async (req,res)=>{
     const city=await UsercitiesModel.findOne({userID:req.userID})
     console.log(city)
     res.send(city)

@@ -31,7 +31,7 @@ const Login=()=>{
                 localStorage.setItem("user",JSON.stringify(Result.user));
                 localStorage.setItem("token",JSON.stringify(Result.auth));
                 alert(Result.msg)
-                navigate("/")
+                navigate("/weather")
                 // navigate("/")
             }
             else{

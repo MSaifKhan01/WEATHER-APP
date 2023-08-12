@@ -115,3 +115,34 @@
     max-width: 300px;
   }
 }
+.searchCont{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inputTag{
+ width: 40vh;
+ height: 3vw;
+ 
+}
+.searchCont button{
+  height: 3vw;
+  background-color: #87CEEB;
+}
+.mainCont{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.weather-card{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: 40vh;
+  padding: 40px;
+  border-radius: 20px;
+  margin-top: 30px;
+  background-color: #87CEEB;
+}
+.weather-card img{
+  width: 100px;
+}
