@@ -14,6 +14,7 @@ const Nav=()=>{
            {auth ? <ul className="nav-ul">
                 
                 <li><Link to="/Register">Register</Link></li>
+                <li><Link to="/weather">Weather</Link></li>
                 <li><Link onClick={logout} to="/Register">Logout ({JSON.parse(auth).name})</Link></li>
                </ul> 
                 :

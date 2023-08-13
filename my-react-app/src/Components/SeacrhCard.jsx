@@ -4,7 +4,7 @@ import WeatherCard from './CardTemp';
 
 function WeatherSearchCard() {
   const [weatherData, setWeatherData] = useState(null);
-  const [city, setCity] = useState(''); // State to hold the user's chosen city
+  const [city, setCity] = useState(''); 
 
 console.log("hi")
 // useEffect(() => {
@@ -12,7 +12,8 @@ console.log("hi")
 //   }, [city]);
   
   const handleCityChange = () => {
-    if (city === '') return; // Don't fetch if city is empty
+ 
+    if (city === '') return; 
     fetch(`http://localhost:4039/city?city=${city}`)
       .then(response => {
         if (!response.ok) {

@@ -1,7 +1,14 @@
 const jwt=require('jsonwebtoken')
 require('dotenv').config()
+
+
+
+
 const auth=async (req,res,next)=>{
-    const token=req.headers.authorization
+    const token=req.headers.authorization || null
+    // const token = req.cookies.authToken;
+    // let token = req.cookies.token;
+    console.log("from aouth,",token)
     if(token){
         jwt.verify(token,process.env.secretkey,(err,decoded)=>{
             if(decoded){

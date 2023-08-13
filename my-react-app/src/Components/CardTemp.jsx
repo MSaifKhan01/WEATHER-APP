@@ -9,8 +9,11 @@ function WeatherCard({ data }) {
       <img src={data.current.condition.icon} alt="" />
       <h2>{data.location.name}</h2>
       <div>
-        <p>Temperature: {data.current.temp_c}°C</p>
+        <p>Temperature: {data.current.temp_c}°C , {data.current.temp_f} F </p>
+        
         <p>Humidity: {data.current.humidity}%</p>
+
+        <p>Local Time: {data.location.localtime}</p>
         {/* <p>Weather: {weather[0].description}</p> */}
         
 
