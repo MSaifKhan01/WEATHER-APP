@@ -8,7 +8,7 @@ function WeatherCardPage(){
         <div>
         <Nav/>
         < WeatherSearchCard />
-        < MySearches />
+        
         </div>
     )
 }

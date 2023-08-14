@@ -1,6 +1,7 @@
 
 import React,{useState,useEffect} from "react"
 import {useNavigate} from 'react-router-dom'
+import Swal from 'sweetalert2';
 
 const Login=()=>{
 
@@ -29,8 +30,9 @@ const Login=()=>{
             //  }
              if(Result.msg==="login succesful"){
                 localStorage.setItem("user",JSON.stringify(Result.user));
-                localStorage.setItem("token",JSON.stringify(Result.auth));
-                alert(Result.msg)
+                localStorage.setItem("token",Result.token);
+               
+                Swal.fire(Result.msg)
                 navigate("/weather")
                 // navigate("/")
             }

@@ -7,6 +7,7 @@ const Signup=()=>{
     const [email,setEmail]=useState("")
     const [password,setPassword]=useState("")
     const [preferredcity,setPreferredcity]=useState("")
+    const navigate=useNavigate()
     // const navigate=useNavigate()
 
 
@@ -22,6 +23,7 @@ const Signup=()=>{
         try {
             Result=await Result.json()
              console.log(Result)
+             navigate("/login")
             //  if(Result.msg=="Registration Succesful"){
             //     navigate("/")
             //  }

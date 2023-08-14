@@ -146,3 +146,26 @@
 .weather-card img{
   width: 100px;
 }
+
+#main{
+  text-align: center;
+
+}
+.ListSearch{
+  display: flex;
+  
+
+  
+  gap: 10px;
+  justify-content: center; 
+  align-items: center; 
+ 
+}
+.ListSearch li{
+
+  list-style: none;
+  background-color: #61dafb;
+  border-radius: 7px;
+  padding: 5px;
+
+}

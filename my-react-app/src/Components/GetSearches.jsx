@@ -1,26 +1,34 @@
 import { useState, useEffect } from "react";
 import {useNavigate} from 'react-router-dom'
+import Swal from 'sweetalert2';
+
 
 function MySearches() {
     const [arr, setArr] = useState([]); 
     const navigate=useNavigate()
+    let token=localStorage.getItem("token")
 
     function GetData() {
-        const token=localStorage.getItem('user');
-        fetch("http://localhost:4039/city/usercity")
+        
+        fetch("http://localhost:4039/city/usercity",{
+            headers:{
+                "Authorization":`${token}`
+              }
+        })
             .then((res) => res.json())
             .then((data) => {
                 console.log("from searches", data);
                
-                if(token){
-                    
-                }else{
-                    if(data.msg=="Login first"){
-                        alert(data.msg)
-                        navigate("/login")
+               
+                
+                     Swal.fire(data.msg);
+                     localStorage.removeItem("user")
+                     localStorage.removeItem("token")
+                 
 
-                    }
-                }
+                    navigate("/login")
+
+             
                 setArr(data.citiesvisited);
             })
             .catch((err) => {
@@ -41,7 +49,10 @@ function MySearches() {
             {Array.isArray(arr) && arr.length > 0 ? (
                 arr.map((ele,i) => (
                     <div key={i}>
-                        <h1>City:-{ele}</h1>
+                        <ul class="ListSearch">
+                            <li>{i+1} - City:-  {ele}</li>
+                        </ul>
+                   
                      
                     </div>
                 ))

@@ -5,7 +5,7 @@ const redis = require('../redis')
 const UsercitiesModel = require('../model/usercities.model')
 const cityrouter = express.Router()
 
-cityrouter.get("/", async (req, res) => {
+cityrouter.get("/",auth, async (req, res) => {
     console.log(".........try...........")
     const city = req.query.city || req.preferredcity
     const cachedata = await redis.get(city+req.userID)
@@ -28,7 +28,7 @@ cityrouter.get("/", async (req, res) => {
 
 })
 
-cityrouter.get("/usercity",async (req,res)=>{
+cityrouter.get("/usercity",auth,async (req,res)=>{
     const city=await UsercitiesModel.findOne({userID:req.userID})
     console.log(city)
     res.send(city)
