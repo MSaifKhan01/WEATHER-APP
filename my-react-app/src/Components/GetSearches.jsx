@@ -21,12 +21,12 @@ function MySearches() {
                
                
                 
-                     Swal.fire(data.msg);
-                     localStorage.removeItem("user")
-                     localStorage.removeItem("token")
+                    //  Swal.fire(data.msg);
+                    //  localStorage.removeItem("user")
+                    //  localStorage.removeItem("token")
                  
 
-                    navigate("/login")
+                    // navigate("/login")
 
              
                 setArr(data.citiesvisited);
@@ -50,7 +50,9 @@ function MySearches() {
                 arr.map((ele,i) => (
                     <div key={i}>
                         <ul class="ListSearch">
-                            <li>{i+1} - City:-  {ele}</li>
+                            <li>{i+1} <p>City:-  {ele.city}</p> 
+                            <p>visitedAt:-  {ele.visitedAt}</p>
+                            </li>
                         </ul>
                    
                      

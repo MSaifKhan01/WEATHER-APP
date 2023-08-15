@@ -17,6 +17,7 @@ const Nav=()=>{
 
                 <li><Link to="/">Home </Link></li>
                 <li><Link to="/Register">Sign Up</Link></li>
+                <li><Link to="/weather">Weather</Link></li>
                 <li><Link to="/Search">My Searches</Link></li>
                 {/* <li><Link to="/weather">Weather</Link></li> */}
                 <li><Link onClick={logout} to="/Register">Logout ({JSON.parse(auth).name})</Link></li>
