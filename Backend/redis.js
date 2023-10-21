@@ -1,8 +1,9 @@
 const Redis=require('ioredis')
 
 const configuartion={
-    port:19979,
-    host:"redis-19979.c305.ap-south-1-1.ec2.cloud.redislabs.com",
+    port:19043,
+    host:"redis-19043.c301.ap-south-1-1.ec2.cloud.redislabs.com",
+    
     username:"default",
     password:process.env.redis_Key
 }
