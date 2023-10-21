@@ -12,7 +12,7 @@ const Login=()=>{
 
 
     const HandleData=async()=>{
-        let Result= await fetch('http://localhost:4039/user/login',{
+        let Result= await fetch('https://weather-app-sw7g.onrender.com/user/login',{
             method:"POST",
             body:JSON.stringify({email,password}),
             headers:{

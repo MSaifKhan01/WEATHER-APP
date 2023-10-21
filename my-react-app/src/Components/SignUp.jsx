@@ -12,7 +12,7 @@ const Signup=()=>{
 
 
     const HandleData=async()=>{
-        let Result= await fetch('http://localhost:4039/user/register',{
+        let Result= await fetch('https://weather-app-sw7g.onrender.com/user/register',{
             method:"POST",
             body:JSON.stringify({name,email,password,preferredcity}),
             headers:{

@@ -10,7 +10,7 @@ function MySearches() {
 
     function GetData() {
         
-        fetch("http://localhost:4039/city/usercity",{
+        fetch("https://weather-app-sw7g.onrender.com/city/usercity",{
             headers:{
                 "Authorization":`${token}`
               }

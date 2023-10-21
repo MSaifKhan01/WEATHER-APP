@@ -26,7 +26,7 @@ let token=localStorage.getItem("token")
     }
     
     if (city === '') return; 
-    fetch(`http://localhost:4039/city?city=${city}`,{
+    fetch(`https://weather-app-sw7g.onrender.com/city?city=${city}`,{
       headers:{
         "Authorization":`${token}`
       }
