@@ -38,7 +38,7 @@ This project is a weather application that allows users to retrieve weather info
   - Redis: In-memory data store for data retrieval and caching.
   - MongoDB Atlas: A cloud-based database service for data storage.
 - **API Documentation:**
-  - Detailed API documentation can be found in the [API Documentation](backend/API%20DOC/readme.md).
+  - Detailed API documentation can be found in the [API Documentation](/readme.md).
 
 ## Installation
 To run this project locally, follow these steps:
