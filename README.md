@@ -38,12 +38,12 @@ This project is a weather application that allows users to retrieve weather info
   - Redis: In-memory data store for data retrieval and caching.
   - MongoDB Atlas: A cloud-based database service for data storage.
 - **API Documentation:**
-  - Detailed API documentation can be found in the [API Documentation](/readme.md).
+  - Detailed API documentation can be found in the [API Documentation](Backend/readme.md).
 
 ## Installation
 To run this project locally, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/MSaifKhan01/TODO-ReactApp-01.git`
+1. Clone the repository: `git clone https://github.com/MSaifKhan01/WEATHER-APP.git`
 2. Navigate to the project directory: `cd my-react-app`
 
 ### Frontend (React.js)
