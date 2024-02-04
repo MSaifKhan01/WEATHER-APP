@@ -1,5 +1,5 @@
 
-import MySearches from "../Components/GetSearches";
+
 import Nav from "../Components/Nav";
 import WeatherSearchCard from "../Components/SeacrhCard";
 

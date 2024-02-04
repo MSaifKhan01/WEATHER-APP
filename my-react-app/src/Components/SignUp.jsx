@@ -1,6 +1,6 @@
 
 import React,{useState} from "react"
-import {useNavigate} from 'react-router-dom'
+import {useNavigate,Link} from 'react-router-dom'
 
 const Signup=()=>{
     const [name,setName]=useState("")
@@ -40,11 +40,15 @@ const Signup=()=>{
 
             <input className="inputBox"  type="text" onChange={(e)=>setEmail(e.target.value)} placeholder="Enter Email"/>
 
-            <input className="inputBox"  type="text" onChange={(e)=>setPassword(e.target.value)} placeholder="Enter Password"/>
+            <input className="inputBox"  type="Password" onChange={(e)=>setPassword(e.target.value)} placeholder="Enter Password"/>
 
             <input className="inputBox"  type="text" onChange={(e)=>setPreferredcity(e.target.value)} placeholder="Enter City"/>
 
             <button className="inputBox" onClick={HandleData}>Submit</button>
+
+            <div className="navi">  Already have an acccount ? 
+                <Link to="/login"> Login</Link>
+            </div>
         </div>
     )
 

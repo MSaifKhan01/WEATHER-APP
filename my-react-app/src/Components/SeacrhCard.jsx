@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import WeatherCard from './CardTemp';
 import Swal from 'sweetalert2';
 import {useNavigate} from 'react-router-dom'
@@ -17,22 +17,24 @@ let token=localStorage.getItem("token")
   
   const handleCityChange = () => {
     
-    console.log(token)
+    console.log("yvv",token)
     if(!token){
       
       Swal.fire("login First")
       navigate("/login")
      
     }
+    console.log("city is : ",city)
     
-    if (city === '') return; 
+    // if (city === '') return; 
     fetch(`https://weather-app-sw7g.onrender.com/city?city=${city}`,{
       headers:{
         "Authorization":`${token}`
       }
     })
       .then(response => {
-        if(response.statusText=="Too Many Requests"){
+        console.log("fhvn ")
+        if(response.statusText==="Too Many Requests"){
 
            Swal.fire('You Have Make Too Many Request You need to Login again');
            localStorage.removeItem("user")
@@ -47,10 +49,13 @@ let token=localStorage.getItem("token")
         }
         
         
-        return response.json();
+        
+        let res= response.json();
+        console.log("Res : ",res)
+        return res;
       })
       .then(data => {
-        console.log(data);
+        console.log("cgcgc",data);
        
         setWeatherData(data);
       })

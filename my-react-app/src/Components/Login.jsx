@@ -1,6 +1,6 @@
 
-import React,{useState,useEffect} from "react"
-import {useNavigate} from 'react-router-dom'
+import React,{useState} from "react"
+import {useNavigate,Link} from 'react-router-dom'
 import Swal from 'sweetalert2';
 
 const Login=()=>{
@@ -22,7 +22,7 @@ const Login=()=>{
 
         try {
             Result=await Result.json()
-             console.log(Result)
+             console.log("gfhgfh",Result)
             //  if(){
                 
                
@@ -59,9 +59,13 @@ const Login=()=>{
 
             <input className="inputBox"  type="text" onChange={(e)=>setEmail(e.target.value)} placeholder="Enter Email"/>
 
-            <input className="inputBox"  type="text" onChange={(e)=>setPassword(e.target.value)} placeholder="Enter Password"/>
+            <input className="inputBox"  type="password" onChange={(e)=>setPassword(e.target.value)} placeholder="Enter Password"/>
 
             <button className="inputBox" onClick={HandleData}>Submit</button>
+
+            <div className="navi">  Create an Account ? 
+                <Link to="/register"> Register</Link>
+            </div>
         </div>
     )
 
