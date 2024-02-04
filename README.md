@@ -76,7 +76,7 @@ The project utilizes the following API routes:
 ### Rate Limiting Middleware (limiter)
 - Description: Limits the number of requests per IP address to prevent abuse.
 - Applied globally to all routes.
-- Rate Limit: 3 requests per 15 minutes
+- Rate Limit: 3 requests per minutes
 
 ## Environment Variables
 - `PORT`: The port on which the server listens.
