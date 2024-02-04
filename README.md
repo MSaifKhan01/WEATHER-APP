@@ -4,7 +4,7 @@
 This project is a weather application that allows users to retrieve weather information for different cities. It also provides user registration and login features.
 
 ## Frontend
-- **Frontend Deployment Link:** [Weather App Frontend](https://weather-msk.netlify.app/)
+- **Frontend Deployment Link:** [Weather App Frontend](https://weather-05t.netlify.app/)
 - **Tech Stack:**
   - React.js: A front-end framework for building user interfaces.
   - React Navigation: Used for navigation within the application.
