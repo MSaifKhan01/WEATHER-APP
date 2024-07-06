@@ -33,7 +33,7 @@ const configuration = {
     port: 15072,
     host: 'redis-15072.c84.us-east-1-2.ec2.redns.redis-cloud.com',
     username: 'default',
-    password: process.env.redis_Key || 'urIt86b0hhkirlN0ZGhtkOSzV9eqN3W3' // Use the environment variable if available
+    password: process.env.redis_Key 
 };
 
 // Create a new Redis client instance
