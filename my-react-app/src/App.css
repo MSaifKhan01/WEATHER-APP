@@ -138,16 +138,15 @@
   text-align: center;
 
 }
+
 .ListSearch{
   display: flex;
-  
-
-  
   gap: 10px;
   justify-content: center; 
   align-items: center; 
  
 }
+
 .ListSearch li{
 
   list-style: none;
