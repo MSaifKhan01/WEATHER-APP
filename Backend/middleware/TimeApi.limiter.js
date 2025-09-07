@@ -5,6 +5,13 @@ const limiter = rateLimit({
 	max: 3, // Limit each IP to 100 requests per `window` (here, per 15 minutes)
 	standardHeaders: true, // Return rate limit info in the `RateLimit-*` headers
 	legacyHeaders: false, // Disable the `X-RateLimit-*` headers
+	  skip: (req, res) => {
+    // Skip limiter for this path
+    if (req.path === "/city/usercity") {
+      return true; // No limit
+    }
+    return false; // Apply limit
+  }
 })
 
 module.exports={limiter}

@@ -26,27 +26,58 @@
 // module.exports=redis
 
 
-const Redis = require('ioredis');
+// const Redis = require('ioredis');
+
+// // Configuration for ioredis
+// const configuration = {
+//     port: 15072,
+//     host: 'redis-15072.c84.us-east-1-2.ec2.redns.redis-cloud.com',
+//     username: 'default',
+//     password: process.env.redis_Key 
+// };
+
+// // Create a new Redis client instance
+// const redis = new Redis(configuration);
+
+// // Event listener for connection
+// redis.on('connect', () => {
+//     console.log('Connected to Redis');
+// });
+
+// // Event listener for error
+// redis.on('error', (err) => {
+//     console.error('Redis connection error:', err);
+// });
+
+// module.exports = redis;
+
+
+
+
+require("dotenv").config();
+const Redis = require("ioredis");
 
 // Configuration for ioredis
 const configuration = {
-    port: 15072,
-    host: 'redis-15072.c84.us-east-1-2.ec2.redns.redis-cloud.com',
-    username: 'default',
-    password: process.env.redis_Key 
+  port: process.env.REDIS_PORT,
+  host: process.env.REDIS_HOST,
+  username: "default",
+  password: process.env.REDIS_PASSWORD,
+//   tls: {} // Redis Cloud requires TLS
 };
 
 // Create a new Redis client instance
 const redis = new Redis(configuration);
 
 // Event listener for connection
-redis.on('connect', () => {
-    console.log('Connected to Redis');
+redis.on("connect", () => {
+  console.log("✅ Connected to Redis");
 });
 
 // Event listener for error
-redis.on('error', (err) => {
-    console.error('Redis connection error:', err);
+redis.on("error", (err) => {
+  console.error("❌ Redis connection error:", err);
 });
 
 module.exports = redis;
+
